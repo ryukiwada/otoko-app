@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="#101827" name="theme-color"/><title>漢アプリ | Ver.1.6</title><style>
+<html lang="ja"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="#101827" name="theme-color"/><title>漢アプリ | Ver.1.6.1</title><style>
 :root{font-family:system-ui,-apple-system,'Segoe UI',sans-serif;color-scheme:dark;background:#0b1220;color:#e9edf5}*{box-sizing:border-box}body{margin:0}button,input,textarea,select{font:inherit}button{cursor:pointer}button:disabled{opacity:.4;cursor:not-allowed}a{color:#94c5ff}header{position:sticky;top:0;background:#101827ee;backdrop-filter:blur(12px);border-bottom:1px solid #273246;z-index:3}.wrap{max-width:1100px;margin:auto;padding:0 20px}.head{display:flex;align-items:center;justify-content:space-between;min-height:76px;gap:12px}.logo{font-size:20px;font-weight:800;letter-spacing:1px}.sub{font-size:12px;color:#92a1b8}.btn{border:1px solid #37465e;background:#202e44;color:white;padding:10px 15px;border-radius:11px}.primary{background:#657df4;border-color:#657df4;font-weight:700}.danger{background:#4b2531;border-color:#7b3c4e}.btn:hover{filter:brightness(1.12)}main{padding-top:28px!important;padding-bottom:65px!important}h1{font-size:27px;margin:0 0 8px}h2{font-size:19px}p.muted,.muted{color:#98a6bc}.topline{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:22px 0}.stat{background:#141f30;border:1px solid #28374d;border-radius:16px;padding:18px}.stat strong{font-size:28px;display:block}.stat span{font-size:13px;color:#93a1b8}.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:23px 0}.field{background:#151f30;border:1px solid #344257;color:#f2f4fc;border-radius:10px;padding:12px;min-width:0}.toolbar #search{flex:2;min-width:200px}.toolbar select{flex:1;min-width:150px}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:18px}.item{border:1px solid #2c3b50;background:#151f30;border-radius:15px;overflow:hidden;cursor:pointer;transition:transform .15s}.item:hover{transform:translateY(-3px);border-color:#788bea}.cover{aspect-ratio:3/4;background:#202c3f;display:flex;align-items:center;justify-content:center;overflow:hidden;color:#758ba8;text-align:center}.cover img{height:100%;width:100%;object-fit:cover}.placeholder{font-size:42px}.info{padding:13px}.title{font-weight:700;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;min-height:42px}.meta{color:#a8b5c7;font-size:12px;margin-top:7px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.tags{display:flex;gap:5px;flex-wrap:wrap;margin-top:9px}.tag{font-size:11px;border-radius:20px;padding:4px 8px;background:#293852;color:#c3d2fb}.rating{color:#ffcf70}.empty{padding:55px 15px;text-align:center;color:#9aabc4;background:#151f30;border:1px dashed #344257;border-radius:18px}dialog{border:1px solid #3c4b61;background:#131d2d;color:#f0f3fa;border-radius:20px;width:min(650px,calc(100% - 20px));max-height:92vh;padding:0}dialog::backdrop{background:#020611cf}.modalhead{position:sticky;top:0;background:#182439;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;z-index:2}.modalbody{padding:22px;overflow:auto}.x{border:0;background:transparent;color:#b5c2da;font-size:28px}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.full{grid-column:1/-1}label{display:block;color:#c6d3e8;font-size:13px;font-weight:600;margin-bottom:6px}input,textarea,select{width:100%}textarea{min-height:75px;resize:vertical}.hint{color:#8e9eb4;font-size:12px;margin-top:6px}.preview{height:180px;width:140px;background:#25344b;border-radius:10px;display:grid;place-items:center;overflow:hidden;margin:10px 0}.preview img{width:100%;height:100%;object-fit:cover}.actions{display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap;margin-top:24px}.detail{display:grid;grid-template-columns:180px 1fr;gap:22px}.detail .cover{border-radius:12px}.detail p{margin:8px 0}.detail-row{border-bottom:1px solid #2b3b51;padding:9px 0;overflow-wrap:anywhere}.detail-row b{display:block;font-size:12px;color:#93a8c1;margin-bottom:3px}.star{color:#ffc967}.notice{padding:12px 16px;background:#1a2a43;border:1px solid #345070;border-radius:12px;font-size:13px;margin:15px 0;color:#bad0ed}#toast{position:fixed;bottom:25px;left:50%;transform:translateX(-50%);background:#263d57;padding:12px 20px;border-radius:12px;display:none;z-index:9}#io{display:none}.footer{margin-top:36px;font-size:12px;color:#8b9bb3}@media(max-width:640px){.wrap{padding:0 14px}.head{min-height:65px}.logo{font-size:17px}.stats{gap:7px}.stat{padding:11px}.stat strong{font-size:23px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.detail{grid-template-columns:1fr}.detail .cover{max-width:200px}.formgrid{grid-template-columns:1fr}.modalbody{padding:16px}.toolbar select{min-width:115px}}
 
 /* Ver.1.1: theme, responsive layout, theme selection */
@@ -88,7 +88,66 @@ html,body{min-height:100%}main.wrap{padding-bottom:115px!important;padding-top:2
 .history-summary{display:flex;gap:10px;flex-wrap:wrap;margin:17px 0}.history-summary .stat{flex:1;min-width:135px}.history-feed{display:grid;gap:11px;margin:18px 0}.history-entry{width:100%;display:flex;align-items:center;text-align:left;gap:14px;background:#151f30;color:inherit;border:1px solid #344257;border-radius:15px;padding:12px}.history-entry:active{opacity:.75}.history-thumb{width:62px;height:66px;background:#202c3f;border-radius:9px;display:grid;place-items:center;flex-shrink:0;overflow:hidden}.history-thumb img{width:100%;height:100%;object-fit:contain}.history-detail{min-width:0;flex:1}.history-detail strong{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:14px}.history-detail span{display:block;color:#9faec5;font-size:12px;margin-top:6px}.settings-panel{background:#151f30;border:1px solid #344257;border-radius:18px;padding:18px;margin:20px 0;display:grid;gap:13px}.settings-panel .topActions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%;gap:12px}.settings-panel .btn{min-height:48px}.settings-panel #layoutSwitch{width:100%;text-align:center}.app-page h1{margin:0 0 12px}
 html[data-theme="pink"] .bottom-nav{background:#fff0f6f5;border-top-color:#e9c4d5;box-shadow:0 -7px 25px #ab6c8c22}html[data-theme="pink"] .bottom-tab{color:#927287}html[data-theme="pink"] .bottom-tab.active{background:#f9d8e8;color:#864c69;border-color:#e4abc8}html[data-theme="pink"] .history-entry,html[data-theme="pink"] .settings-panel{background:#fffdfd;border-color:#efd8e3}html[data-theme="pink"] .history-thumb{background:#fbe5ef}html[data-theme="pink"] .history-detail span{color:#8f6d81}
 @media(max-width:640px){.bottom-nav{gap:3px;padding:6px 8px max(7px,env(safe-area-inset-bottom))}.bottom-tab{min-height:54px;font-size:10px}.bottom-tab .bottom-icon{font-size:22px}main.wrap{padding-bottom:105px!important}.settings-panel{padding:13px}.head{min-height:58px}.topline{margin-bottom:8px}.v15-panel{margin:14px 0}}
-</style></head><body><header><div class="wrap head"><div><div class="logo">◈ 漢アプリ <small class="version">v1.6</small></div><div class="sub">自分だけの作品ライブラリ</div></div><button class="btn primary" id="add">＋ 作品登録</button></div></header><main class="wrap">
+
+/* Ver.1.6.1: prevent long titles from widening the viewport.
+   Use a constrained grid so counts remain visible, and allow natural wrapping. */
+#tab-rank, #tab-history, #tab-rank .v15-panel,
+#tab-rank .v15-rankings, #tab-rank .v15-rankings > div,
+#tab-history .history-feed {min-width:0;max-width:100%;box-sizing:border-box;}
+#tab-rank .v15-rankings {width:100%;min-width:0;}
+#tab-rank .rank-row {
+  display:grid;
+  grid-template-columns:24px minmax(0,1fr) auto;
+  align-items:start;
+  gap:10px;
+  min-width:0;
+  max-width:100%;
+  box-sizing:border-box;
+}
+#tab-rank .rank-num {min-width:0;padding-top:2px;}
+#tab-rank .rank-name {
+  min-width:0;
+  white-space:normal;
+  overflow:visible;
+  text-overflow:clip;
+  overflow-wrap:anywhere;
+  word-break:break-word;
+  line-height:1.5;
+  font-size:13px;
+}
+#tab-rank .rank-value {
+  min-width:0;
+  white-space:nowrap;
+  text-align:right;
+  align-self:center;
+  font-variant-numeric:tabular-nums;
+}
+#tab-history .history-entry {
+  display:grid;
+  grid-template-columns:62px minmax(0,1fr) 12px;
+  max-width:100%;
+  min-width:0;
+  box-sizing:border-box;
+  align-items:center;
+  gap:12px;
+}
+#tab-history .history-detail {min-width:0;overflow:hidden;}
+#tab-history .history-detail strong {
+  white-space:normal;
+  overflow:visible;
+  text-overflow:clip;
+  overflow-wrap:anywhere;
+  word-break:break-word;
+  line-height:1.5;
+}
+#tab-history .history-detail span {overflow-wrap:anywhere;}
+@media(max-width:640px){
+  #tab-rank .v15-rankings {grid-template-columns:minmax(0,1fr);}
+  #tab-rank .rank-row {grid-template-columns:20px minmax(0,1fr) auto;gap:7px;}
+  #tab-history .history-entry {grid-template-columns:48px minmax(0,1fr) 10px;gap:9px;padding:10px;}
+  #tab-history .history-thumb {width:48px;height:56px;}
+}
+</style></head><body><header><div class="wrap head"><div><div class="logo">◈ 漢アプリ <small class="version">v1.6.1</small></div><div class="sub">自分だけの作品ライブラリ</div></div><button class="btn primary" id="add">＋ 作品登録</button></div></header><main class="wrap">
 
 
 <section class="app-page active" data-page="list" id="tab-list"><div class="topline"><div><h1>マイライブラリ</h1><div class="muted">お気に入りの作品を、いつでも見つけられる。</div></div></div><section class="stats"><div class="stat"><strong id="total">0</strong><span>登録作品</span></div><div class="stat"><strong id="favorites">0</strong><span>お気に入り</span></div><div class="stat"><strong id="actresses">0</strong><span>登録女優</span></div></section><div class="toolbar"><input class="field" id="search" placeholder="🔎  品番・タイトル・女優・ジャンルで検索"/><select class="field" id="filter"><option value="all">すべての作品</option><option value="fav">お気に入りのみ</option><option value="high">高評価（4以上）</option></select><select class="field" id="sort"><option value="updated">最近登録・更新した順</option><option value="created">登録日が新しい順</option><option value="viewed">最終視聴が新しい順（手動含む）</option><option value="rating">評価が高い順</option><option value="plays">視聴回数が多い順</option><option value="lastPlay">視聴リンクを開いた順</option><option value="title">タイトル順</option></select></div><section class="advanced" id="advanced">
